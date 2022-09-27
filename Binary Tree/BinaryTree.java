@@ -30,16 +30,40 @@ public class BinaryTree {
         AccountantSupervisor.left = Accountant;
         AccountantSupervisor.right = Personnel;
 
+        System.out.print("\nIn order Traversal: ");
+        traverseInOrder(CEO);
+
         System.out.print("\nPre order Traversal: ");
         traversePreOrder(CEO);
+
+        System.out.print("\nPost order Traversal: ");
+        traversePostOrder(CEO);
     }
-        
-        // Traverse Preorder method
+
+    // Traverse Inorder Method
+    static void traverseInOrder(Node node) {
+        if (node != null) {
+            traverseInOrder(node.left);
+            System.out.print(" " + node.data);
+            traverseInOrder(node.right);
+        }
+    }
+
+    // Traverse Postorder method
+    static void traversePostOrder(Node node) {
+        if (node != null) {
+            traversePostOrder(node.left);
+            traversePostOrder(node.right);
+            System.out.print(" " + node.data);
+        }
+    }
+
+    // Traverse Preorder method
     static void traversePreOrder(Node node) {
         if (node != null) {
             System.out.print(" " + node.data);
             traversePreOrder(node.left);
             traversePreOrder(node.right);
-        }    
+        }
     }
 }
