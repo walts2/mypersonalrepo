@@ -3,30 +3,30 @@ public class BinaryTree {
 
     public static void main(String[] args) {
 
-        // Create root node A
+        // Create root node CEO
         Node CEO = new Node("CEO");
-        // Create node B
+        // Create node Vice President
         Node VicePresident = new Node("Vice President");
-        // Create node C
+        // Create node Accountant Supervisor
         Node AccountantSupervisor = new Node("Accountant Supervisor");
-        // Create node D
+        // Create node Accountant Executive
         Node AccountExec = new Node("Account Executive");
-        // Create node E
+        // Create node Manager
         Node Manager = new Node("Manager");
-        // Create node F
+        // Create node Accountant
         Node Accountant = new Node("Accountant");
-        // Create node G
+        // Create node Personnel
         Node Personnel = new Node("Personnel");
 
-        // Set left and right child of root node A
+        // Set left and right child of root node CEO
         CEO.left = VicePresident;
         CEO.right = AccountantSupervisor;
 
-        // Set left and right child of node B
+        // Set left and right child of node Vice President
         VicePresident.left = AccountExec;
         VicePresident.right = Manager;
 
-        // Set left and right child of node C
+        // Set left and right child of node Accountant Supervisor
         AccountantSupervisor.left = Accountant;
         AccountantSupervisor.right = Personnel;
 
